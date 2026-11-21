@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="LibraryRefactoring.vcxproj" Id="cce22641-8cb0-4b2d-b620-cd2aee1ff1ce" />
+</Solution>
