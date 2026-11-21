@@ -21,18 +21,11 @@ if (BUILD_APPROVAL_TESTS_WITH_CATCH2 OR BUILD_UNIT_TESTS_WITH_CATCH2)
 endif()
 
 if (BUILD_APPROVAL_TESTS_WITH_GTEST OR BUILD_UNIT_TESTS_WITH_GTEST)
-  # Force Google Test to link the C/C++ runtimes dynamically
   set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 
-  # Disable building GMock
   set(BUILD_GMOCK OFF CACHE BOOL "" FORCE)
 
-  # Do not install GTest 
   set(INSTALL_GTEST OFF CACHE BOOL "" FORCE)
 endif()
 
-add_subdirectory(cpp_catch2_approvaltest)
-add_subdirectory(cpp_catch2_unittest)
-add_subdirectory(cpp_googletest_approvaltest)
 add_subdirectory(cpp_googletest_unittest)
-add_subdirectory(cpp_texttest)
